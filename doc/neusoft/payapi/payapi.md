@@ -11,13 +11,13 @@
 1. 编写获取订单详情的url地址，需组装为AlipayOrder对象，[请查看getOrderInfo方法](java/MyAlipayController.java)
 2. AlipayOrder 实体相关信息
 >    //我方唯一订单号
-    private String outTradeNo;
+    private String outTradeNo;<br/>
     //商品名称
-    private String orderName;
+    private String orderName;<br/>
     // 商品描述
-    private String body;
+    private String body;<br/>v
     //商品金额(元)
-    private String totalFee;
+    private String totalFee;<br/>
     // 用户手机号:如果是微信端，会自动填入
     private String callPhone;
     //商品描述url(退出的url)
