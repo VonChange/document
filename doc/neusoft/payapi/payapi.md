@@ -40,7 +40,7 @@
     //支付宝在微信内的手机号 的返回回调 优化使用<br/>
     private String phoneCallbackUrl;<br/>
 
-3. 调用支付宝支付api
+3. 调用支付宝支付api<br/>
  http://pay.geexek.com/alipay/web?orderUrl=你的获取订单详情的url地址
 
 4. 同步回调,请查看[returnUrl方法](java/MyAlipayController.java)
@@ -91,9 +91,9 @@ http://pay.geexek.com/wxpay/web?orderUrl=你的获取订单详情的url地址
 5. 异步回调，请查看[updateEnrollOrderByNotify方法](java/MyWxpayController.java)
 
 ##### 微信和支付宝支付
-如果不是单一支付，请使用该方式
-1.  组装为List<ComPay>对象，请查看[getPayTypeList方法](java/MyWxpayController.java)
-2.  [comPay对象相关信息](java/ComPay.java)
+如果不是单一支付，请使用该方式<br/>
+ 1.   组装为List<ComPay>对象，请查看[getPayTypeList方法](java/MyWxpayController.java)
+ 2.   [comPay对象相关信息](java/ComPay.java)
 
  >  //1为支付宝 2为微信<br/>
  	private Integer payType;<br/>
@@ -101,7 +101,7 @@ http://pay.geexek.com/wxpay/web?orderUrl=你的获取订单详情的url地址
     //比如 http://pay.geexek.com/wxpay/web?orderUrl=你的获取订单详情的url地址<br/>
 	private String orderUrl;<br/>
 
-3.  调用支付api<br/>
+ 3.  调用支付api<br/>
 http://pay.geexek.com/com/choose?payTypeListUrl=你的获取订单url列表地址（getPayTypeList方法地址）
 
-4. 该方式需要先生成订单，生成订单可参照[generateOrder方法](java/MyWxpayController.java)
+ 4.  该方式需要先生成订单，生成订单可参照[generateOrder方法](java/MyWxpayController.java)
