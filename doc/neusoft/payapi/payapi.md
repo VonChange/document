@@ -51,40 +51,40 @@
 ##### 微信支付
 1. 编写获取订单详情的url地址，需组装为WxpayOrder对象，请查看[getOrderInfo方法](java/MyWxpayController.java)
 2. [WxpayOrder 实体相关信息](java/WxpayOrder.java)
->   // 我方唯一订单号
-    private String outTradeNo;
-    //商品名称
-    private String orderName;
-   // 商品描述
-    private String body;
-    //商品金额(元) ***不是分
-    private String totalFee;
-    //商品描述url(退出的url)
-    //* 必填
-    private String showUrl;
-    //微信支付相关配置实体
-    private WxpayConfig wxpayConfig;
+>   // 我方唯一订单号<br/>
+    private String outTradeNo;<br/>
+    //商品名称<br/>
+    private String orderName;<br/>
+   // 商品描述<br/>
+    private String body;<br/>
+    //商品金额(元) ***不是分<br/>
+    private String totalFee;<br/>
+    //商品描述url(退出的url)<br/>
+    //* 必填<br/>
+    private String showUrl;<br/>
+    //微信支付相关配置实体<br/>
+    private WxpayConfig wxpayConfig;<br/>
     
     [WxpayConfig 实体相关信息](java/WxpayConfig.java)
->   //微信APP ID
-    private  String appId;
-    // 微信APP Key
-    private  String appKey;
-    // 商户ID
-    String merchantId;
-    //商户密钥
-    String secret;
-    // 微信异步通知url
-    private String notifyUrl;
-    //微信前端跳转url :手机网页端
-    private String wapReturnUrl;
-    //微信前端跳转url :pc网页端
-    private String webReturnUrl;
-    // 微信支付授权目录 如果空 则是pay.geexek.com/wxpay/  否则需要自定义开发(代理请求)
-    //一般为空 **
-    private String myWxPayUrl;
+>   //微信APP ID<br/>
+    private  String appId;<br/>
+    // 微信APP Key<br/>
+    private  String appKey;<br/>
+    // 商户ID<br/>
+    String merchantId;<br/>
+    //商户密钥<br/>
+    String secret;<br/>
+    // 微信异步通知url<br/>
+    private String notifyUrl;<br/>
+    //微信前端跳转url :手机网页端<br/>
+    private String wapReturnUrl;<br/>
+    //微信前端跳转url :pc网页端<br/>
+    private String webReturnUrl;<br/>
+    // 微信支付授权目录 如果空 则是pay.geexek.com/wxpay/  否则需要自定义开发(代理请求)<br/>
+    //一般为空 **<br/>
+    private String myWxPayUrl;<br/>
 
-3. 调用微信支付api
+3. 调用微信支付api<br/>
 http://pay.geexek.com/wxpay/web?orderUrl=你的获取订单详情的url地址
 
 4. 同步回调,请查看[returnUrl方法](java/MyWxpayController.java)
@@ -95,13 +95,13 @@ http://pay.geexek.com/wxpay/web?orderUrl=你的获取订单详情的url地址
 1.  组装为List<ComPay>对象，请查看[getPayTypeList方法](java/MyWxpayController.java)
 2.  [comPay对象相关信息](java/ComPay.java)
 
- >  //1为支付宝 2为微信
- 	private Integer payType;
-    //支付宝或微信支付url 
-    //比如 http://pay.geexek.com/wxpay/web?orderUrl=你的获取订单详情的url地址
-	private String orderUrl;
+ >  //1为支付宝 2为微信<br/>
+ 	private Integer payType;<br/>
+    //支付宝或微信支付url <br/>
+    //比如 http://pay.geexek.com/wxpay/web?orderUrl=你的获取订单详情的url地址<br/>
+	private String orderUrl;<br/>
 
-3.  调用支付api
+3.  调用支付api<br/>
 http://pay.geexek.com/com/choose?payTypeListUrl=你的获取订单url列表地址（getPayTypeList方法地址）
 
-4.该方式需要先生成订单，生成订单可参照[generateOrder方法](java/MyWxpayController.java)
+4. 该方式需要先生成订单，生成订单可参照[generateOrder方法](java/MyWxpayController.java)
