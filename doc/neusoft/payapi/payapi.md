@@ -92,7 +92,7 @@ http://pay.geexek.com/wxpay/web?orderUrl=你的获取订单详情的url地址
 
 ##### 微信和支付宝支付
 如果不是单一支付，请使用该方式<br/>
- 1.   组装为List<ComPay>对象，请查看[getPayTypeList方法](java/MyWxpayController.java)
+ 1.   组装为List<ComPay>对象，请查看[getPayTypeList方法](java/MypayController.java)
  2.   [comPay对象相关信息](java/ComPay.java)
 
  >  //1为支付宝 2为微信<br/>
@@ -104,4 +104,4 @@ http://pay.geexek.com/wxpay/web?orderUrl=你的获取订单详情的url地址
  3.  调用支付api<br/>
 http://pay.geexek.com/com/choose?payTypeListUrl=你的获取订单url列表地址（getPayTypeList方法地址）
 
- 4.  该方式需要先生成订单，生成订单可参照[generateOrder方法](java/MyWxpayController.java)
+ 4.  该方式需要先生成订单，生成订单可参照[generateOrder方法](java/MypayController.java)
